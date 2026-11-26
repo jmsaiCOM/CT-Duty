@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Creative Team – Duty Schedule</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="blobs"></div>
+<section id="login" class="login">
+  <button class="btn glass sm theme-fab" data-act="theme">Switch theme</button>
+  <div class="login-card glass">
+    <img src="logo.png" class="brand-logo" alt="Creative Team Logo">
+    <h1>Creative Team</h1>
+    <small>School of Computer Studies</small>
+    <label>Institutional email or username
+      <div class="email-wrap">
+        <input id="lEmail" type="text" placeholder="name@cct.edu.ph or username" autocomplete="off">
+        <div class="autofill-pop" id="emailQuickPop" hidden>
+          <button type="button" class="autofill-item" data-fill-email="creativeteam@cct.edu.ph" data-fill-pass="CTadmin123">creativeteam@cct.edu.ph</button>
+          <button type="button" class="autofill-item" data-fill-email="grepo@cct.edu.ph" data-fill-pass="CTadmin123">grepo@cct.edu.ph</button>
+          <button type="button" class="autofill-item" data-fill-email="partida@cct.edu.ph" data-fill-pass="Partida123">partida@cct.edu.ph</button>
+          <button type="button" class="autofill-item" data-fill-email="urmenita@cct.edu.ph" data-fill-pass="CTadmin123">urmenita@cct.edu.ph</button>
+          <button type="button" class="autofill-item" data-fill-email="sarmientojianmark@cct.edu.ph" data-fill-pass="CTadmin123">sarmientojianmark@cct.edu.ph</button>
+        </div>
+      </div>
+    </label>
+    <label>Password
+      <div class="pass-wrap">
+        <input id="lPass" type="password" placeholder="Password" autocomplete="off">
+        <button type="button" class="pass-toggle" id="togglePass" aria-label="Toggle password visibility" title="Show or hide password">
+          <svg class="eye-icon" viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+            <circle cx="12" cy="12" r="3"></circle>
+          </svg>
+        </button>
+        <div class="autofill-pop" id="passQuickPop" hidden>
+          <button type="button" class="autofill-item" data-fill-email="creativeteam@cct.edu.ph" data-fill-pass="CTadmin123">creativeteam@cct.edu.ph</button>
+          <button type="button" class="autofill-item" data-fill-email="grepo@cct.edu.ph" data-fill-pass="CTadmin123">grepo@cct.edu.ph</button>
+          <button type="button" class="autofill-item" data-fill-email="partida@cct.edu.ph" data-fill-pass="Partida123">partida@cct.edu.ph</button>
+          <button type="button" class="autofill-item" data-fill-email="urmenita@cct.edu.ph" data-fill-pass="CTadmin123">urmenita@cct.edu.ph</button>
+          <button type="button" class="autofill-item" data-fill-email="sarmientojianmark@cct.edu.ph" data-fill-pass="CTadmin123">sarmientojianmark@cct.edu.ph</button>
+        </div>
+      </div>
+    </label>
+    <p class="err" id="lErr"></p>
+    <button class="btn primary" data-act="login">Log in</button>
+  </div>
+</section>
+<div class="app" id="app" hidden>
+  <aside class="side glass">
+    <div class="brand">
+      <img src="logo.png" class="brand-logo" alt="Creative Team Logo">
+      <div><b>Creative Team</b><small>School of Computer Studies</small></div>
+    </div>
+    <nav id="nav">
+      <button class="nav-item" data-act="nav" data-p="overview"><span class="nav-icon">🏠</span> Overview</button>
+      <button class="nav-item" data-act="nav" data-p="schedule"><span class="nav-icon">📅</span> Duty Schedule</button>
+      <button class="nav-item" data-act="nav" data-p="members"><span class="nav-icon">👥</span> Team members</button>
+      <button class="nav-item" data-act="nav" data-p="submissions"><span class="nav-icon">📥</span> Submissions</button>
+      <button class="nav-item" data-act="nav" data-p="settings"><span class="nav-icon">⚙️</span> Settings</button>
+    </nav>
+    <button class="me" data-act="profile" id="meCard" title="View profile"></button>
+  </aside>
+  <main class="main">
+    <header class="top">
+      <input id="search" class="search glass" type="search" placeholder="Search duties, members…">
+      <div class="top-actions">
+        <button class="icon-btn glass" data-act="bell" aria-label="Notifications">&#128276;<i class="dot" id="dot" hidden></i></button>
+        <button class="btn primary" id="topMain" data-act="assign">Assign duty</button>
+      </div>
+    </header>
+    <div id="view" class="view"></div>
+  </main>
+</div>
+<div class="modal" id="modal"></div>
+<div class="toast glass" id="toast"></div>
+<script src="app.js"></script>
+</body>
+</html>
